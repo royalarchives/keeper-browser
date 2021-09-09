@@ -35,5 +35,10 @@
     "webpack": "^5.52.0",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.1.1"
+  },
+  "royalArchives": {
+    "type": "ui",
+    "description": "Adds SHOUTcast radio station genres and streaming",
+    "icon": "firefox"
   }
 }
