@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "browser",
+    "slug": "browser",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "browser"
+}
