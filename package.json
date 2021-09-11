@@ -46,7 +46,8 @@
           "group": "keeper",
           "name": "Browse",
           "url": "/browse",
-          "icon": "fab firefox"
+          "app": "/web-build/index.html",
+          "icon": "fas folder-open"
         }
       ]
     }
