@@ -29,6 +29,8 @@ jobs:
         git config --global user.name "Github Actions"
     - name: Increase version
       run: npm version patch
+    - name: Build web version
+      run: expo build:web
     - name: Publish to NPM
       uses: JS-DevTools/npm-publish@v1
       with:
