@@ -2,6 +2,7 @@
   "name": "@royalarchives/keeper-browser",
   "main": "index.js",
   "version": "1.0.11",
+  "homepage": "/browser",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -45,9 +46,9 @@
         {
           "group": "keeper",
           "name": "Browse",
-          "url": "/browse",
+          "url": "/browser/browse",
           "app": "/web-build/index.html",
-          "icon": "fas folder-open"
+          "icon": "fas folde-open"
         }
       ]
     }
