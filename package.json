@@ -39,16 +39,15 @@
   },
   "royalArchives": {
     "type": "ui",
-    "description": "Adds SHOUTcast radio station genres and streaming",
-    "icon": "firefox",
+    "description": "Web and mobile interface for browsing your archives",
     "links": {
       "browser": [
         {
           "group": "keeper",
           "name": "Browse",
           "url": "/browser/browse",
-          "app": "/web-build/index.html",
-          "icon": "fas folde-open"
+          "app": "/web-build/",
+          "icon": "fas folder-open"
         }
       ]
     }
