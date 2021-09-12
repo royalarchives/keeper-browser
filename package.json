@@ -45,9 +45,10 @@
         {
           "group": "keeper",
           "name": "Browse",
-          "url": "/browser/browse",
-          "app": "/web-build/",
-          "icon": "fas folder-open"
+          "icon": "fas folder-open",
+          "url": "browse",
+          "prefix": "browser",
+          "source": "web-build"
         }
       ]
     }
