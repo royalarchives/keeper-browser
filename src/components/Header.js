@@ -7,7 +7,6 @@ class Header extends Component {
     return (
       <View className='server-header'>
         <Text className='title'>
-          <FontAwesomeIcon icon={['fas', 'archive']} />
           Keeper Browser
         </Text>
       </View>
