@@ -1,7 +1,7 @@
 {
   "name": "@royalarchives/keeper-browser",
   "main": "index.js",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "homepage": "/browser",
   "scripts": {
     "android": "react-native run-android",
