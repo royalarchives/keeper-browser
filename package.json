@@ -1,7 +1,11 @@
 {
   "name": "@royalarchives/keeper-browser",
   "main": "index.js",
+<<<<<<< HEAD
   "version": "1.0.18",
+=======
+  "version": "1.0.20",
+>>>>>>> 951c675ad9f69c1bf99d360d63baf7e1107bc7dd
   "homepage": "/browser",
   "scripts": {
     "android": "react-native run-android",
