@@ -14,8 +14,10 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
+    "@react-navigation/native": "^6.0.2",
     "bootstrap": "^5.1.1",
     "expo": "~42.0.1",
+    "expo-fontawesome": "^0.1.2",
     "expo-splash-screen": "~0.11.2",
     "expo-status-bar": "~1.0.4",
     "expo-updates": "~0.8.1",
@@ -26,7 +28,9 @@
     "react-native-reanimated": "~2.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-unimodules": "~0.14.5",
-    "react-native-web": "^0.13.18"
+    "react-native-web": "^0.13.18",
+    "react-native-safe-area-context": "3.2.0",
+    "@react-native-community/masked-view": "0.1.10"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
