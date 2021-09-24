@@ -40,5 +40,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "royalArchives": {
+    "type": "ui",
+    "description": "Web and mobile interface for browsing your archives",
+    "links": {
+      "browser": [
+        {
+          "group": "keeper",
+          "name": "Browse",
+          "icon": "fas folder-open",
+          "url": "browse",
+          "prefix": "browser",
+          "source": "build"
+        }
+      ]
+    }
   }
 }
