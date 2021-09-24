@@ -37,7 +37,7 @@ class Archive extends Component {
         return (
           <section className='archive'>
             <h2>{this.state.file.path.substring(this.state.file.path.lastIndexOf('/') + 1)}</h2>
-            <img src={embedURL} />
+            <img alt={this.state.file.path} src={embedURL} />
             <Button className='btn btn-primary' onClick={this.handleFileDownload}>
               <FontAwesomeIcon icon={['fas', 'download']} />
               Download file

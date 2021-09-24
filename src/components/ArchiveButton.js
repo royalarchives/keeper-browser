@@ -19,12 +19,17 @@ class ArchiveButton extends Component {
     }
     switch (props.archive.extension) {
       case 'mp3':
+      case 'wav':
+      case 'flac':
         this.state.icon = 'file-audio'
         break
       case 'png':
       case 'jpeg':
       case 'gif':
         this.state.icon = 'file-image'
+        break
+      default:
+        this.state.icon = 'file'
         break
     }
     this.handleClick = this.handleClick.bind(this)
