@@ -1,3 +1,4 @@
+/* eslint-disable */
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import React, { Component } from 'react'
@@ -6,7 +7,7 @@ import Header from './components/Header.js'
 import Archives from './components/Archives.js'
 
 class App extends Component {
-  async componentDidMount() {
+  async componentDidMount () {
     this._isMounted = true
     const url = (process.env.REACT_APP_SERVER_URL || '') + '/library.json'
     try {
@@ -22,11 +23,11 @@ class App extends Component {
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this._isMounted = false
   }
 
-  render() {
+  render () {
     if (!this.state || !this.state.library) {
       return (<div>Loading</div>)
     }

@@ -14,8 +14,8 @@ class ArchiveButton extends Component {
       name: props.archive.name,
       path: props.archive.relativePath,
       extension: props.archive.extension,
-      handleFileOpen: props.handleFileOpen,
-      handleFolderChange: props.handleFolderChange
+      handleFileOpen: props.onFileOpen,
+      handleFolderChange: props.onFolderChange
     }
     switch (props.archive.extension) {
       case 'mp3':

@@ -13,8 +13,8 @@ class FolderCrumb extends Component {
       id: props.archive.id,
       name: props.archive.name,
       path: props.archive.relativePath,
-      handleFolderChange: props.handleFolderChange
-    } 
+      handleFolderChange: props.onFolderChange
+    }
     this.handleClick = this.handleClick.bind(this)
   }
 

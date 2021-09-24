@@ -41,20 +41,20 @@ class Archive extends Component {
             <Button className='btn btn-primary' onClick={this.handleFileDownload}>
               <FontAwesomeIcon icon={['fas', 'download']} />
               Download file
-              </Button>
+            </Button>
           </section>
         )
       case 'mp3':
         return (
           <section className='archive'>
             <h2>{this.state.file.path.substring(this.state.file.path.lastIndexOf('/') + 1)}</h2>
-            <audio controls="controls" src={embedURL}>
-                Your browser does not support the HTML5 Audio element.
+            <audio controls='controls' src={embedURL}>
+              Your browser does not support the HTML5 Audio element.
             </audio>
             <Button className='btn btn-primary' onClick={this.handleFileDownload}>
               <FontAwesomeIcon icon={['fas', 'download']} />
               Download file
-              </Button>
+            </Button>
           </section>
         )
       default:

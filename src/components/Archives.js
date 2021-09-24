@@ -19,7 +19,7 @@ class Archives extends Component {
   }
 
   handleFileOpen (path) {
-    console.log('opening file...', path )
+    console.log('opening file...', path)
     const findArchive = (path) => {
       const parts = path.split('/')
       for (const part of parts) {
@@ -34,7 +34,7 @@ class Archives extends Component {
               return child
             }
             return scan(child.children, partIndex + 1)
-          } 
+          }
         }
       }
       return scan(this.state.library.children, 0)
@@ -83,12 +83,12 @@ class Archives extends Component {
       crumbs.pop()
       return (
         <section className='archives'>
-          <ArchiveList key='single-archive' archives={crumbs} handleFolderChange={this.handleFolderChange} handleFileOpen={this.handleFileOpen} />
+          <ArchiveList key='single-archive' archives={crumbs} onFolderChange={this.handleFolderChange} onFileOpen={this.handleFileOpen} />
           <Archive file={this.state.file} />
         </section>
       )
-    } 
-    let archives, title
+    }
+    let archives
     // browsing 'root' the files and folders from combined catalog paths
     if (!this.state.path) {
       console.log('rendering "/" root')
@@ -116,8 +116,8 @@ class Archives extends Component {
                 return child.children
               }
               console.log('scanning more children')
-              return scan(child.children, partIndex + 1)  
-            } 
+              return scan(child.children, partIndex + 1)
+            }
           }
         }
         return scan(this.state.library.children, 0)
@@ -128,7 +128,7 @@ class Archives extends Component {
     console.log('rendering archivelist with archives', archives)
     return (
       <section className='archives'>
-        <ArchiveList key={this.state.path} archives={crumbs.concat(archives)} handleFolderChange={this.handleFolderChange} handleFileOpen={this.handleFileOpen} />
+        <ArchiveList key={this.state.path} archives={crumbs.concat(archives)} onFolderChange={this.handleFolderChange} onFileOpen={this.handleFileOpen} />
       </section>
     )
   }
