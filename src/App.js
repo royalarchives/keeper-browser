@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import Header from './components/Header.js'
+import Archives from './components/Archives.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  async componentDidMount() {
+    this._isMounted = true
+    const url = (process.env.REACT_APP_SERVER_URL || '') + '/library.json'
+    try {
+      const raw = await fetch(url)
+      if (raw && raw.json) {
+        const library = await raw.json()
+        if (this._isMounted) {
+          this.setState({ library })
+        }
+      }
+    } catch (error) {
+      console.log('error', url, error)
+    }
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false
+  }
+
+  render() {
+    if (!this.state || !this.state.library) {
+      return (<div>Loading</div>)
+    }
+    return (
+      <div className='App container'>
+        <Header />
+        <Archives library={this.state.library} />
+        <p><a href='#top' className='top'>Top of page</a></p>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
+
+ReactDOM.render(<App />, document.getElementById('root'))

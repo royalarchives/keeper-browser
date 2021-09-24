@@ -1,0 +1,9 @@
+
+.crumb-list,
+.archive-list { margin: 1vmax 0 }
+.crumb-list,
+.crumb-list li,
+.archive-list,
+.archive-list li { list-style-type: none }
+.crumb-list li { display: inline-block; color: #999 }
+.crumb-list span { display: inline-block; padding: 0 0.25rem; font-size: 0.5rem }

@@ -1,0 +1,10 @@
+.archive-button {  text-align: left; background-color: transparent; border-color: Transparent }
+.archive-button svg { margin-right: 0.5rem }
+
+@media (prefers-color-scheme: light) {
+  .archive-button { color: #333 } 
+}
+
+@media (prefers-color-scheme: dark) {
+  .archive-button { color: #CCC }
+}

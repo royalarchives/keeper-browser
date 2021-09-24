@@ -1,0 +1,13 @@
+.server-header { user-select: none; font-family: mono; padding: 0; margin: 0; font-size: 0; line-height: 0 }
+.server-header span { display: inline-block; color: #999; font-size: small; line-height: unset; text-transform: uppercase }
+.server-header svg { color: #CCC; margin-right: 0.5rem }
+
+@media (prefers-color-scheme: light) {
+  .server-header span { color: #333 }
+  .server-header svg { color: #666 }  
+}
+
+@media (prefers-color-scheme: dark) {
+  .server-header span { color: #999 }
+  .server-header svg { color: #CCC } 
+}

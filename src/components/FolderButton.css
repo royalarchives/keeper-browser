@@ -1,0 +1,11 @@
+.folder-button { font-size: 0.85rem; padding: 0 0.5rem; margin: 0; text-align: left; background-color: transparent; border-color: transparent }
+.folder-button svg { margin-right: 0.5rem }
+
+
+@media (prefers-color-scheme: light) {
+  .folder-button { color: #666 } 
+}
+
+@media (prefers-color-scheme: dark) {
+  .folder-button { color: #999 }
+}
