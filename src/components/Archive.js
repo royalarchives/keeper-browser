@@ -45,12 +45,38 @@ class Archive extends Component {
           </section>
         )
       case 'mp3':
+      case 'wav':
+      case 'ogg':
+      case 'flac':
+      case 'm4a':
         return (
           <section className='archive'>
             <h2>{this.state.file.path.substring(this.state.file.path.lastIndexOf('/') + 1)}</h2>
             <audio controls='controls' src={embedURL}>
               Your browser does not support the HTML5 Audio element.
             </audio>
+            <Button className='btn btn-primary' onClick={this.handleFileDownload}>
+              <FontAwesomeIcon icon={['fas', 'download']} />
+              Download file
+            </Button>
+          </section>
+        )
+      case 'mp4':
+      case 'mov':
+      case 'avi':
+      case 'flv':
+      case 'mkv':
+      case 'wmv':
+      case 'mpg':
+      case 'mpeg':
+        const type = `video/${this.state.file.extension}`
+        return (
+          <section className='archive'>
+            <h2>{this.state.file.path.substring(this.state.file.path.lastIndexOf('/') + 1)}</h2>
+            <video controls='controls' src={embedURL}>
+              <source src={embedURL} type={type} />
+              Your browser does not support the HTML5 Audio element.
+            </video>
             <Button className='btn btn-primary' onClick={this.handleFileDownload}>
               <FontAwesomeIcon icon={['fas', 'download']} />
               Download file
