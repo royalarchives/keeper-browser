@@ -61,11 +61,21 @@ class Archive extends Component {
             </Button>
           </section>
         )
+      case 'mkv':
+        return (
+          <section className='archive'>
+            <h2>{this.state.file.path.substring(this.state.file.path.lastIndexOf('/') + 1)}</h2>
+            <video controls='controls' src={embedURL} type='video/x-matroska'></video>
+            <Button className='btn btn-primary' onClick={this.handleFileDownload}>
+              <FontAwesomeIcon icon={['fas', 'download']} />
+              Download file
+            </Button>
+          </section>
+        )
       case 'mp4':
       case 'mov':
       case 'avi':
       case 'flv':
-      case 'mkv':
       case 'wmv':
       case 'mpg':
       case 'mpeg':
@@ -73,7 +83,7 @@ class Archive extends Component {
           <section className='archive'>
             <h2>{this.state.file.path.substring(this.state.file.path.lastIndexOf('/') + 1)}</h2>
             <video controls='controls' src={embedURL}>
-              <source src={embedURL} type={`video/${this.state.file.extension !== 'mkv' ? this.state.file.extension : 'x-matroska' }`} />
+              <source src={embedURL} type={`video/${this.state.file.extension}`} />
               Your browser does not support the HTML5 Video element.
             </video>
             <Button className='btn btn-primary' onClick={this.handleFileDownload}>

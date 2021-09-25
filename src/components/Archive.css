@@ -1,10 +1,10 @@
 .archive { margin: 0 0 2vmax 0 }
 .archive audio,
+.archive video,
 .archive img { display: block; width: 100%; border-radius: 0.25rem; background-color: #FFF }
 .archive h2 { font-size: 1.25rem }
 .archive button { margin-top: 1rem }
 .archive button svg { margin-right: 0.5rem }
-
 
 @media (prefers-color-scheme: light) {
   .archive-button { color: #333 } 
