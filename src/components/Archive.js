@@ -69,13 +69,12 @@ class Archive extends Component {
       case 'wmv':
       case 'mpg':
       case 'mpeg':
-        const type = `video/${this.state.file.extension}`
         return (
           <section className='archive'>
             <h2>{this.state.file.path.substring(this.state.file.path.lastIndexOf('/') + 1)}</h2>
             <video controls='controls' src={embedURL}>
-              <source src={embedURL} type={type} />
-              Your browser does not support the HTML5 Audio element.
+              <source src={embedURL} type={`video/${this.state.file.extension}`} />
+              Your browser does not support the HTML5 Video element.
             </video>
             <Button className='btn btn-primary' onClick={this.handleFileDownload}>
               <FontAwesomeIcon icon={['fas', 'download']} />
