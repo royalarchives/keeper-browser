@@ -73,7 +73,7 @@ class Archive extends Component {
           <section className='archive'>
             <h2>{this.state.file.path.substring(this.state.file.path.lastIndexOf('/') + 1)}</h2>
             <video controls='controls' src={embedURL}>
-              <source src={embedURL} type={`video/${this.state.file.extension}`} />
+              <source src={embedURL} type={`video/${this.state.file.extension !== 'mkv' ? this.state.file.extension : 'x-matroska' }`} />
               Your browser does not support the HTML5 Video element.
             </video>
             <Button className='btn btn-primary' onClick={this.handleFileDownload}>
